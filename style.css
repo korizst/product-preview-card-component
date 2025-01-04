@@ -1,0 +1,163 @@
+/* --- FONTS --- */
+
+@font-face {
+    font-family: "Montserrat-500";
+    src: url("fonts/montserrat/Montserrat-VariableFont_wght.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat-700";
+    src: url("fonts/montserrat/Montserrat-VariableFont_wght.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url("fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+    font-weight: 700;
+}
+
+/* --- COLORS, BOX MODEL, FONT-SIZE --- */
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* --- CUSTOM CSS --- */
+
+body {
+    color: var(--dark-grayish-blue);
+    background-color: var(--cream);
+    font-family: "Montserrat-500";
+    
+}
+
+main {
+    background-color: var(--white);
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media only screen and (min-width: 992px) {
+    main {
+        width: 50%;
+        padding: 1.3rem;
+    }
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    max-width: 375px;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 1440px;
+        flex-direction: row;
+    }
+
+    header {
+        width: 50%;
+    }
+}
+
+.header-image {
+    display: block;
+    width: 100%;
+}
+
+.caption {
+    text-transform: uppercase;
+}
+
+.heading {
+    font-family: "Fraunces";
+    font-size: 2.5rem;
+    color: var(--very-dark-blue);
+    line-height: 2.5rem;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+}
+
+.price-now {
+    font-family: "Fraunces";
+    font-size: 2.5rem;
+    color: var(--dark-cyan);
+}
+
+.price-old {
+    text-decoration: line-through;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--dark-cyan);
+    text-decoration: none;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .button:hover {
+        background-color: var(--very-dark-blue);
+    }
+}
+
+.button-text {
+    color: var(--white);
+    font-family: "Montserrat-700";
+}
+
+.attribution {
+    color: var(--very-dark-blue);
+    font-size: 11px;
+    text-align: center;
+    padding-top: 1.7rem;
+}
+
+.attribution a {
+    color: var(--dark-cyan);
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .attribution a:hover {
+        color: var(--very-dark-blue);
+    }
+}
